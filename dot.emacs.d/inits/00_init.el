@@ -9,6 +9,7 @@
 
 ;; PATH
 (setq exec-path (cons "/usr/local/bin" exec-path))
+(add-to-list 'exec-path "~/.emacs.d/bin")
 
 ;; mail address
 (setq user-mail-address "satoshi.yoshinaga.147@gmail.com")
