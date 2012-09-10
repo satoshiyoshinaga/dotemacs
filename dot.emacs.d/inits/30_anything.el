@@ -2,3 +2,4 @@
 (require 'anything-startup)
 (global-set-key (kbd "C-;")     'anything-filelist+)
 (global-set-key (kbd "C-x C-f")     'anything-find-file)
+(define-key global-map (kbd "M-y") 'anything-show-kill-ring)

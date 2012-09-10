@@ -3,7 +3,7 @@
 ;; 表示関連の設定
 ;;
 ;;
-(tool-bar-mode 0)
+(tool-bar-mode -1)
 
 ;;
 ;; Window settings
@@ -12,11 +12,11 @@
 (if window-system
     (progn
       (set-frame-parameter nil 'alpha 100) ; 透明度
-      (tool-bar-mode nil)                  ; ツールバー非表示
+      (tool-bar-mode -1)                  ; ツールバー非表示
       (set-scroll-bar-mode nil)            ; スクロールバー非表示
       (setq line-spacing 0.2)              ; 行間
       (when (>= emacs-major-version 23)
-        (tool-bar-mode nil)
+        (tool-bar-mode -1)
 ;;        (set-frame-font "Menlo-12")
         (set-fontset-font (frame-parameter nil 'font)
                           'japanese-jisx0208
@@ -84,3 +84,10 @@
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ファイルサイズ表示
+(size-indication-mode t)
+;; 時刻表示
+(setq display-time-mode t)
+;; バッテリー表示
+(setq display-battery-mode t)
