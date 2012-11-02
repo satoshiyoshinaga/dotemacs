@@ -18,3 +18,5 @@
 (global-set-key (kbd "C-M-r")   'replace-regexp)
 (global-set-key (kbd "C-r")     'replace-string)
 (global-set-key (kbd "C-/")     'undo)
+(global-set-key (kbd "C-c ;")   'comment-region)
+(global-set-key (kbd "C-c +")   'uncomment-region)
