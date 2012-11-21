@@ -1,0 +1,6 @@
+;; elispにパスを通す(一応書いておきます)
+(add-to-list 'load-path "~/.emacs.d/elisp/django-mode/")
+(require 'django-html-mode)
+(require 'django-mode)
+(yas/load-directory "~/.emacs.d/elisp/django-mode/snippets")
+(add-to-list 'auto-mode-alist '("\\.html$" . django-html-mode))
