@@ -2,9 +2,11 @@
 (setq display-buffer-function 'popwin:display-buffer)
 
 (setq anything-samewindow nil)
-(push '("*anything file list*" :position left :width 45 :dedicated t)
+(push '("*anything file list*" :position bottom :width 45 :dedicated t)
       popwin:special-display-config)
 (push '("*anything*" :position left :width 45 :dedicated t)
       popwin:special-display-config)
-(push '("*anything find-file*" :position left :width 45 :dedicated t)
+(push '("*anything find-file*" :position bottom :width 45 :dedicated t)
+      popwin:special-display-config)
+(push '("*my-anything*" :position bottom :width 45 :dedicated t)
       popwin:special-display-config)

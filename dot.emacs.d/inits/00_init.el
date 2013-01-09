@@ -46,3 +46,9 @@
 
 ;; スタートページ非表示
 (setq inhibit-startup-message t)
+
+;; file名の補完で大文字小文字を区別しない
+(setq completion-ignore-case t)
+
+;; バッファ自動再読み込み
+(global-auto-revert-mode 1)
