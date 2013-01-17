@@ -1,5 +1,5 @@
 (when (require 'color-moccur nil t)
-  (define-key global-map (kbd "C-s") 'occur-by-moccur)
+  (define-key global-map (kbd "C-m") 'occur-by-moccur)
   (setq moccur-split-word t)
   (add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
   (when (and (executable-find "cmigemo")
