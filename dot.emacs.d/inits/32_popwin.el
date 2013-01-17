@@ -10,3 +10,5 @@
       popwin:special-display-config)
 (push '("*my-anything*" :position bottom :width 45 :dedicated t)
       popwin:special-display-config)
+(push '("*Moccur*" :position bottom :width 80 :dedicated t)
+      popwin:special-display-config)

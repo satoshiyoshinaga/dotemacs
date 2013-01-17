@@ -29,4 +29,4 @@
      anything-c-source-files-in-current-dir
      anything-c-source-recentf
      anything-c-source-file-name-history
-     ) " *my-anything*"))
+     ) "*my-anything*"))

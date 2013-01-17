@@ -12,7 +12,7 @@
 (global-set-key (kbd "M-g")     'goto-line)
 (global-set-key (kbd "C-S-i")   'indent-region)
 (global-set-key (kbd "C-m")     'newline-and-indent)
-(global-set-key (kbd "C-t")     'next-multiframe-window)
+;;(global-set-key (kbd "C-t")     'next-multiframe-window)
 (global-set-key (kbd "M-<RET>") 'ns-toggle-fullscreen)
 (global-set-key (kbd "C-S-t")   'previous-multiframe-window)
 (global-set-key (kbd "C-M-r")   'replace-regexp)
@@ -20,3 +20,11 @@
 (global-set-key (kbd "C-/")     'undo)
 (global-set-key (kbd "C-c ;")   'comment-region)
 (global-set-key (kbd "C-c +")   'uncomment-region)
+
+(defun other-window-or-split ()
+  (interactive)
+  (when (one-window-p)
+    (split-window-horizontally))
+  (other-window 1))
+
+(global-set-key (kbd "C-t") 'other-window-or-split)
