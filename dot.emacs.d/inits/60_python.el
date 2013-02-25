@@ -1,3 +1,6 @@
+(load-file "~/.emacs.d/vendor/emacs-for-python/epy-init.el")
+
+
 ;;; flymake for python
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 (when (load "flymake" t)
@@ -15,3 +18,4 @@
 (global-set-key [f11] 'flymake-goto-next-error)
 
 (delete '("\\.html?\\'" flymake-xml-init) flymake-allowed-file-name-masks)
+

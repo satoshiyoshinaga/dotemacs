@@ -3,6 +3,6 @@
 # こんな感じでOK
 pyflakes "$1"
 # pep8 --ignore=E221,E701,E202 --repeat "$1"
-pep8 --ignore=E123,E126,E501 --repeat "$1"
+pep8 --repeat "$1"
 
 true
