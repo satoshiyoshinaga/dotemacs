@@ -17,7 +17,6 @@
       (setq line-spacing 0.2)              ; 行間
       (when (>= emacs-major-version 23)
         (tool-bar-mode -1)
-;;        (set-frame-font "Menlo-12")
         (set-fontset-font (frame-parameter nil 'font)
                           'japanese-jisx0208
                           (font-spec :family "M+2VM+IPAG circle" :size 14)))
@@ -32,10 +31,6 @@
 (set-background-color                                  "#333333") ; 背景色
 (set-cursor-color                                      "#FF0000") ; カーソル色
 (set-face-background 'region                           "#222244") ; リージョン
-(set-face-foreground 'modeline                         "#CCCCCC") ; モードライン文字
-(set-face-background 'modeline                         "#333333") ; モードライン背景
-(set-face-foreground 'mode-line-inactive               "#333333") ; モードライン文字(非アクティブ)
-(set-face-background 'mode-line-inactive               "#CCCCCC") ; モードライン背景(非アクティブ)
 (set-face-foreground 'font-lock-comment-delimiter-face "#888888") ; コメントデリミタ
 (set-face-foreground 'font-lock-comment-face           "#888888") ; コメント
 (set-face-foreground 'font-lock-string-face            "#7FFF7F") ; 文字列
@@ -46,20 +41,6 @@
 (set-face-foreground 'font-lock-type-face              "#FFFF7F") ; クラス
 (set-face-foreground 'fringe                           "#666666") ; fringe(折り返し記号なでが出る部分)
 (set-face-background 'fringe                           "#282828") ; fringe
-
-(add-hook 'org-mode-hook
-          '(lambda ()
-             (set-face-foreground 'org-hide "#282828")))
-
-(add-hook 'mmm-mode-hook
-          '(lambda ()
-             (set-face-background 'mmm-default-submode-face "#404040")))
-
-(add-hook 'linum-mode-hook
-          '(lambda ()
-             (set-face-foreground 'linum "#666666")
-             (set-face-background 'linum "#000000")))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; タブ、全角スペースを表示する
@@ -84,13 +65,6 @@
 (ad-enable-advice 'font-lock-mode 'before 'my-font-lock-mode)
 (ad-activate 'font-lock-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; ファイルサイズ表示
-(size-indication-mode t)
-;; 時刻表示
-(setq display-time-mode t)
-;; バッテリー表示
-(setq display-battery-mode t)
 
 ;; 現在行のハイライト
 (defface hlline-face

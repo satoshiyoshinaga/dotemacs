@@ -1,15 +1,34 @@
-;; load-path
-(add-to-list 'load-path "~/.emacs.d/elisp")
-(add-to-list 'load-path "~/.emacs.d/auto-install")
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
 
-;; init-loader
-;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
-;; デフォルトで"~/.emacs.d/inits"以下のファイルをロードする
+
+(require 'cl)
+
+(defvar installing-package-list
+  '(
+    ;; ここに使っているパッケージを書く。
+    init-loader
+    anything
+    anything-complete
+    anything-config
+    anything-match-plugin
+    anything-obsolete
+    anything-show-completion
+    popwin
+    auto-complete
+    flymake-python-pyflakes
+    ))
+
+(let ((not-installed (loop for x in installing-package-list
+                            when (not (package-installed-p x))
+                            collect x)))
+  (when not-installed
+    (package-refresh-contents)
+    (dolist (pkg not-installed)
+        (package-install pkg))))
+
 (require 'init-loader)
-(init-loader-load)
-
-;; auto-install
-;; http://www.emacswiki.org/emacs/auto-install.el
-(require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
-(auto-install-update-emacswiki-package-name t)
+;; (setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
