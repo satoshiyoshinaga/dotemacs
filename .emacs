@@ -19,6 +19,9 @@
     popwin
     auto-complete
     flymake-python-pyflakes
+    multiple-cursors
+    expand-region
+    smartrep
     ))
 
 (let ((not-installed (loop for x in installing-package-list

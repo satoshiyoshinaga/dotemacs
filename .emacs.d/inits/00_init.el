@@ -1,9 +1,9 @@
-;; 
-;; 
-;; 初期設定
-;; 
 ;;
-;; バッファ名 unique 
+;;
+;; 初期設定
+;;
+;;
+;; バッファ名 unique
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
