@@ -10,12 +10,7 @@
   '(
     ;; ここに使っているパッケージを書く。
     init-loader
-    anything
-    anything-complete
-    anything-config
-    anything-match-plugin
-    anything-obsolete
-    anything-show-completion
+    helm
     popwin
     auto-complete
     flymake-python-pyflakes
