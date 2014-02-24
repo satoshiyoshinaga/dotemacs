@@ -1,5 +1,0 @@
-(require 'anything-startup)
-(global-set-key (kbd "C-;")     'anything-for-files)
-(global-set-key (kbd "C-x C-f")     'anything-find-file)
-(global-set-key (kbd "M-y") 'anything-show-kill-ring)
-(global-set-key (kbd "M-x") 'anything-M-x)
