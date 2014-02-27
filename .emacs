@@ -13,7 +13,7 @@
     helm
     popwin
     auto-complete
-    flymake-python-pyflakes
+    flycheck
     multiple-cursors
     expand-region
     smartrep
