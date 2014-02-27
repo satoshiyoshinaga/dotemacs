@@ -11,7 +11,6 @@
 (global-set-key (kbd "C-c d")   'delete-indentation)
 (global-set-key (kbd "M-g")     'goto-line)
 (global-set-key (kbd "C-S-i")   'indent-region)
-(global-set-key (kbd "C-m")     'newline-and-indent)
 (global-set-key (kbd "C-M-r")   'replace-regexp)
 (global-set-key (kbd "C-r")     'replace-string)
 (global-set-key (kbd "C-/")     'undo)
