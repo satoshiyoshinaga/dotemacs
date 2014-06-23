@@ -52,3 +52,7 @@
 
 ;; バッファ自動再読み込み
 (global-auto-revert-mode 1)
+
+;; Mac の emacs で find-file のデフォルトディレクトリを "~/" にする。
+(setq default-directory "~/")
+(setq command-line-default-directory "~/")
