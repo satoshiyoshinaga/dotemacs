@@ -18,7 +18,7 @@
     expand-region
     smartrep
     magit
-    markdown
+    markdown-mode
     ))
 
 (let ((not-installed (loop for x in installing-package-list
