@@ -43,23 +43,24 @@
 (set-face-foreground 'fringe                           "#666666") ; fringe(折り返し記号なでが出る部分)
 (set-face-background 'fringe                           "#282828") ; fringe
 
-
-(create-fontset-from-ascii-font "Inconsolata-12:weight=normal:slant=normal" nil "myfavoritefontset")
-(set-fontset-font "fontset-myfavoritefontset"
-		  'japanese-jisx0208
-		  (font-spec :family "TakaoExGothic" :size 12)
-		  nil
-		  'append)
-(add-to-list 'default-frame-alist '(font . "fontset-myfavoritefontset"))
+;;
+;; font
+;;______________________________________________________________________
+;; 英語
+(set-face-attribute 'default nil
+           :family "Menlo" ;; font
+           :height 150)    ;; font size
+;; 日本語
+(set-fontset-font
+ nil 'japanese-jisx0208
+;; (font-spec :family "Hiragino Mincho Pro")) ;; font
+  (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
+;; 半角と全角の比を1:2に
 (setq face-font-rescale-alist
-	'(("^-apple-hiragino.*" . 1.2)
-	  (".*osaka-bold.*" . 1.2)
-	  (".*osaka-medium.*" . 1.2)
-	  (".*courier-bold-.*-mac-roman" . 1.0)
-	  (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
-	  (".*monaco-bold-.*-mac-roman" . 0.9)
-	  ("-cdac$" . 1.3)
-	  (".*Inconsolata.*" . 1.0)))
+      '((".*Hiragino_Mincho_pro.*" . 1.2)))
+
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; タブ、全角スペースを表示する
@@ -99,15 +100,3 @@
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(initial-frame-alist (quote ((vertical-scroll-bars) (top . 10) (left . 0) (width . 200) (height . 60)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
