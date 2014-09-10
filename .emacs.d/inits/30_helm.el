@@ -35,3 +35,6 @@
 (defun helm-alc ()
   (interactive)
   (helm :sources '(helm-c-source-alc) :buffer "*helm alc*"))
+
+(require 'helm-ls-git)
+(global-set-key (kbd "C-:")     'helm-browse-project)

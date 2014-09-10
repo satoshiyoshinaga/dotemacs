@@ -11,6 +11,7 @@
     ;; ここに使っているパッケージを書く。
     init-loader
     helm
+    helm-ls-git
     popwin
     auto-complete
     flycheck
