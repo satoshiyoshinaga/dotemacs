@@ -22,6 +22,7 @@
     markdown-mode
     haml-mode
     sass-mode
+    google-translate
     ))
 
 (let ((not-installed (loop for x in installing-package-list
